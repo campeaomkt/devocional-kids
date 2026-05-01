@@ -225,6 +225,57 @@ export default function App() {
         </div>
       </section>
 
+      {/* Bonuses Section */}
+      <section className="py-24 px-4 bg-white relative overflow-hidden">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <span className="bg-orange-100 text-orange-600 text-[10px] md:text-xs font-black uppercase px-4 py-1 rounded-full inline-block mb-4 tracking-widest border border-orange-200">
+              Presentes Exclusivos
+            </span>
+            <SectionTitle subtitle="Adquirindo hoje, você recebe gratuitamente estes 3 materiais complementares para acelerar o aprendizado do seu filho.">
+              Bônus Especiais para Você
+            </SectionTitle>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              { 
+                title: "Alfabeto Bíblico", 
+                desc: "Ensina o alfabeto de A a Z com personagens e versículos bíblicos marcantes.", 
+                emoji: "🅰️",
+                originalPrice: "U$ 17,00"
+              },
+              { 
+                title: "Andando com Jesus", 
+                desc: "Um livro lúdico que conta a história da vida de Cristo de forma interativa e cativante.", 
+                emoji: "✝️",
+                originalPrice: "U$ 27,00"
+              },
+              { 
+                title: "Os Nomes dos Animais", 
+                desc: "Interatividade onde as crianças descobrem os nomes dos animais criados por Deus.", 
+                emoji: "🦁",
+                originalPrice: "U$ 17,00"
+              }
+            ].map((bonus, i) => (
+              <div key={i} className="p-8 md:p-10 rounded-[32px] md:rounded-[40px] bg-sky-50 border-2 border-sky-100 relative overflow-hidden group hover:-translate-y-2 transition-all shadow-lg flex flex-col h-full">
+                <div className="absolute top-6 right-6 bg-green-500 text-white text-[9px] md:text-[10px] font-black px-3 py-1 rounded-full shadow-lg">GRÁTIS</div>
+                <div className="w-16 h-16 md:w-20 md:h-20 bg-white rounded-[24px] md:rounded-[32px] mb-6 shadow-md flex items-center justify-center text-3xl md:text-4xl group-hover:scale-110 transition-transform border border-sky-100">
+                   {bonus.emoji}
+                </div>
+                <h4 className="text-lg md:text-xl font-black text-sky-900 border-b-2 border-sky-200 pb-2 mb-4 italic uppercase tracking-tight">#BÔNUS {i + 1}</h4>
+                <p className="font-black text-sky-900 text-base md:text-lg mb-2">{bonus.title}</p>
+                <p className="text-sky-800 font-medium text-sm md:text-base opacity-70 leading-relaxed mb-8">{bonus.desc}</p>
+                <div className="mt-auto pt-4 border-t border-sky-200/50 flex justify-between items-center italic">
+                  <span className="text-[9px] md:text-[10px] font-bold text-sky-400 uppercase tracking-widest">Valor Original</span>
+                  <span className="text-xs md:text-sm font-black text-sky-900 line-through opacity-40">{bonus.originalPrice}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Offer/Pricing Section */}
       <section id="oferta" className="py-16 md:py-24 bg-sky-900 px-4 overflow-hidden relative">
         <div className="max-w-4xl mx-auto relative z-10 text-center mb-10 md:mb-16">
@@ -273,6 +324,41 @@ export default function App() {
                     <ShieldCheck size={14} className="text-sky-900" />
                     <span className="text-[10px] font-black uppercase text-sky-900">Garantia de 7 Dias</span>
                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Guarantee Section */}
+      <section className="py-24 bg-white px-4 relative overflow-hidden">
+        <div className="max-w-5xl mx-auto">
+          <div className="bg-sky-50 rounded-[48px] p-8 md:p-16 border-2 border-sky-100 flex flex-col md:flex-row items-center gap-12 shadow-2xl relative">
+            <div className="absolute -top-10 -left-10 w-40 h-40 bg-yellow-400 rounded-full opacity-10 blur-3xl" />
+            
+            <div className="w-full md:w-1/3 flex justify-center relative">
+              <div className="relative group">
+                <div className="w-48 h-48 md:w-56 md:h-56 bg-white rounded-full flex flex-col items-center justify-center shadow-2xl border-8 border-sky-900 relative z-10 group-hover:scale-105 transition-transform duration-500">
+                  <span className="text-sky-900 font-black text-5xl md:text-6xl italic leading-none">07</span>
+                  <span className="text-sky-900 font-black text-xs md:text-sm uppercase tracking-[0.2em] mt-1">Dias</span>
+                  <div className="absolute -bottom-4 bg-yellow-400 text-yellow-900 font-black px-4 py-1 rounded-full text-[10px] md:text-xs shadow-lg uppercase border-2 border-yellow-600">Garantido</div>
+                </div>
+                {/* Decorative rays */}
+                <div className="absolute inset-0 bg-yellow-400/20 rounded-full blur-2xl group-hover:scale-125 transition-transform duration-700" />
+              </div>
+            </div>
+
+            <div className="w-full md:w-2/3 space-y-6 text-center md:text-left">
+              <h2 className="text-3xl md:text-4xl font-black text-sky-900 italic tracking-tighter leading-none">Risco Zero: <br /><span className="text-orange-500">Garantia Blindada</span></h2>
+              <p className="text-sky-800 font-medium text-lg leading-relaxed opacity-90">
+                Seu investimento está 100% seguro. Se por qualquer motivo você achar que o <span className="font-bold text-sky-900">Devocional Kids</span> não é para você ou seu filho, basta nos enviar um e-mail em até 7 dias. 
+              </p>
+              <p className="text-sky-800 font-black text-xl italic italic">
+                Devolovemos todo o seu dinheiro, sem perguntas e sem letras miúdas.
+              </p>
+              <div className="flex items-center justify-center md:justify-start gap-4">
+                <ShieldCheck size={24} className="text-green-500" />
+                <span className="text-xs font-black text-sky-900 uppercase tracking-widest italic opacity-60">Satisfação Total ou Reembolso</span>
               </div>
             </div>
           </div>
