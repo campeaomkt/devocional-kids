@@ -90,8 +90,38 @@ export default function App() {
         </button>
       </div>
 
+      {/* Navigation Header */}
+      <header className="w-full pt-10 pb-6 px-4">
+        <div className="max-w-7xl mx-auto flex justify-center">
+          <div className="relative inline-flex items-center gap-3 md:gap-6 px-5 py-3 md:px-8 md:py-4 bg-white/80 backdrop-blur-md rounded-[32px] border-b-4 border-sky-100 shadow-xl shadow-sky-900/5 ring-1 ring-sky-50">
+            {/* Brand Icon */}
+            <div className="w-10 h-10 md:w-16 md:h-16 bg-yellow-400 rounded-[16px] md:rounded-[20px] flex items-center justify-center border-4 border-white shadow-lg shadow-yellow-400/30 transform -rotate-6 hover:rotate-0 transition-all duration-300 overflow-hidden">
+              <img 
+                src="https://i.ibb.co/Fbwzfs0w/Chat-GPT-Image-3-de-mai-de-2026-13-28-36.png" 
+                alt="Logo Devocional Kids" 
+                className="w-full h-full object-cover"
+                referrerPolicy="no-referrer"
+              />
+            </div>
+            
+            {/* Project Name */}
+            <h1 className="text-2xl md:text-5xl font-black italic tracking-tighter leading-none whitespace-nowrap">
+              <span className="text-sky-900">Devocional</span>{" "}
+              <span className="text-orange-500">Kids</span>
+            </h1>
+
+            {/* Decorative dots */}
+            <div className="absolute top-2 right-4 flex gap-1">
+              <div className="w-1.5 h-1.5 rounded-full bg-yellow-400 opacity-50"></div>
+              <div className="w-1.5 h-1.5 rounded-full bg-orange-400 opacity-50"></div>
+              <div className="w-1.5 h-1.5 rounded-full bg-sky-400 opacity-50"></div>
+            </div>
+          </div>
+        </div>
+      </header>
+
       {/* Hero Section */}
-      <section className="pt-8 md:pt-16 pb-16 md:pb-32 px-4 relative overflow-hidden">
+      <section className="pt-4 md:pt-10 pb-16 md:pb-32 px-4 relative overflow-hidden">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-10 md:gap-12 relative z-10">
           
           <div className="lg:w-3/5 space-y-6 text-center lg:text-left">
@@ -105,7 +135,7 @@ export default function App() {
               Assuma o protagonismo espiritual da sua casa com um guia de 52 semanas, ensinando a Bíblia de forma simples e apaixonante.
             </p>
             
-            <div className="flex flex-col md:flex-row items-center lg:items-start gap-6 md:gap-8 pt-4 md:pt-8">
+            <div className="flex flex-col-reverse md:flex-row items-center lg:items-start gap-6 md:gap-8 pt-4 md:pt-8">
               <CTAButton onClick={scrollToPricing} className="w-full md:w-auto">QUERO MEU ACESSO AGORA</CTAButton>
               <div className="flex flex-col items-center md:items-start">
                 <span className="text-sky-900 font-bold text-[10px] uppercase opacity-60 italic tracking-widest">Oferta Vitalícia</span>
@@ -120,35 +150,13 @@ export default function App() {
               animate={{ opacity: 1, scale: 1 }}
               className="relative w-full aspect-[4/5] bg-white rounded-[48px] shadow-2xl overflow-hidden border-[10px] border-white ring-1 ring-sky-200"
             >
-              <div className="h-1/2 bg-yellow-400 flex flex-col items-center justify-center relative group overflow-hidden">
-                <div className="absolute inset-0 flex flex-wrap opacity-10">
-                  {[...Array(12)].map((_, i) => (
-                    <div key={i} className="w-12 h-12 border border-yellow-900 rounded-full m-2"></div>
-                  ))}
-                </div>
-                <div className="bg-white px-8 py-4 rounded-2xl shadow-lg border-b-4 border-gray-200 group-hover:scale-110 transition-transform">
-                   <span className="text-4xl md:text-5xl font-black text-sky-900 italic">KIDS</span>
-                </div>
-                <span className="text-sky-900 font-black mt-4 tracking-[0.2em] uppercase text-xs">Devocional Bíblico</span>
-              </div>
-              <div className="p-8 space-y-4">
-                <div className="h-4 w-2/3 bg-blue-50 rounded-full animate-pulse"></div>
-                <div className="h-4 w-full bg-sky-50 rounded-full"></div>
-                <div className="h-4 w-full bg-sky-50 rounded-full"></div>
-                <div className="grid grid-cols-2 gap-4 mt-8">
-                  <div className="aspect-square bg-sky-50 rounded-2xl border-2 border-dashed border-sky-100 flex items-center justify-center text-sky-200">
-                    <BookOpen size={32} />
-                  </div>
-                  <div className="aspect-square bg-sky-50 rounded-2xl border-2 border-dashed border-sky-100 flex items-center justify-center text-sky-200">
-                    <Heart size={32} />
-                  </div>
-                </div>
-              </div>
+              <img 
+                src="https://i.ibb.co/vCz6CNcq/Chat-GPT-Image-3-de-mai-de-2026-13-01-42.png" 
+                alt="Devocional Kids Capa" 
+                className="w-full h-full object-cover"
+                referrerPolicy="no-referrer"
+              />
               
-              <div className="absolute -bottom-6 -left-6 bg-orange-500 text-white p-6 rounded-[32px] font-black shadow-xl rotate-3 border-b-4 border-orange-700 text-center min-w-[140px]">
-                <span className="text-xs leading-none uppercase block opacity-80 mb-1">Apenas</span>
-                <span className="text-3xl">U$ 10.99</span>
-              </div>
             </motion.div>
           </div>
 
@@ -193,7 +201,7 @@ export default function App() {
       </section>
 
       {/* About Section */}
-      <section className="py-16 md:py-24 bg-sky-50 px-4">
+      <section id="material" className="py-16 md:py-24 bg-sky-50 px-4">
         <div className="max-w-5xl mx-auto">
           <SectionTitle>O que é o Devocional Kids?</SectionTitle>
           
@@ -225,8 +233,70 @@ export default function App() {
         </div>
       </section>
 
+      {/* Drawings Carousel Section */}
+      <section className="py-24 bg-sky-50/50 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 mb-12 text-center">
+          <SectionTitle subtitle="Dê uma olhada nos desenhos que você vai receber para colorir e aprender mais da palavra de Deus">
+            52 Desenhos Bíblicos Incríveis
+          </SectionTitle>
+        </div>
+        
+        <div className="relative">
+          <motion.div 
+            className="flex gap-4 md:gap-8"
+            animate={{ x: ["0%", "-50%"] }}
+            transition={{ 
+              duration: 60, 
+              ease: "linear", 
+              repeat: Infinity 
+            }}
+            style={{ width: "fit-content" }}
+          >
+            {[
+              "https://i.ibb.co/HTsqyKWX/capa.jpg",
+              "https://i.ibb.co/rf1CY9XX/pagina-02.jpg",
+              "https://i.ibb.co/PGkB8bPx/pagina-03.jpg",
+              "https://i.ibb.co/whKp262j/pagina-04.jpg",
+              "https://i.ibb.co/LDSbNGqT/pagina-05.jpg",
+              "https://i.ibb.co/4q7FQgx/pagina-06.jpg",
+              "https://i.ibb.co/FZfXdhT/pagina-08.jpg",
+              "https://i.ibb.co/Psc0NhhF/pagina-09.jpg",
+              "https://i.ibb.co/gMtJVyQr/pagina-10.jpg",
+              "https://i.ibb.co/dsZt4T00/pagina-11.jpg",
+              "https://i.ibb.co/HTsqyKWX/capa.jpg",
+              "https://i.ibb.co/rf1CY9XX/pagina-02.jpg",
+              "https://i.ibb.co/PGkB8bPx/pagina-03.jpg",
+              "https://i.ibb.co/whKp262j/pagina-04.jpg",
+              "https://i.ibb.co/LDSbNGqT/pagina-05.jpg",
+              "https://i.ibb.co/4q7FQgx/pagina-06.jpg",
+              "https://i.ibb.co/FZfXdhT/pagina-08.jpg",
+              "https://i.ibb.co/Psc0NhhF/pagina-09.jpg",
+              "https://i.ibb.co/gMtJVyQr/pagina-10.jpg",
+              "https://i.ibb.co/dsZt4T00/pagina-11.jpg"
+            ].map((img, i) => (
+              <div key={i} className="w-[200px] md:w-[300px] shrink-0 aspect-[3/4] bg-white rounded-2xl md:rounded-[32px] shadow-xl border-4 md:border-8 border-white overflow-hidden ring-1 ring-sky-100">
+                <img 
+                  src={img} 
+                  alt={`Página ${i + 1}`} 
+                  className="w-full h-full object-cover"
+                  referrerPolicy="no-referrer"
+                />
+              </div>
+            ))}
+          </motion.div>
+          
+          {/* Gradient Overlays for smooth edges */}
+          <div className="absolute inset-y-0 left-0 w-16 md:w-32 bg-gradient-to-r from-sky-50 to-transparent z-10" />
+          <div className="absolute inset-y-0 right-0 w-16 md:w-32 bg-gradient-to-l from-sky-50 to-transparent z-10" />
+        </div>
+
+        <div className="mt-12 text-center">
+          <p className="text-sky-800 font-black italic text-[10px] md:text-xl uppercase tracking-widest opacity-40">Um conteúdo rico e apaixonante</p>
+        </div>
+      </section>
+
       {/* Bonuses Section */}
-      <section className="py-24 px-4 bg-white relative overflow-hidden">
+      <section id="bonus" className="py-24 px-4 bg-white relative overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <span className="bg-orange-100 text-orange-600 text-[10px] md:text-xs font-black uppercase px-4 py-1 rounded-full inline-block mb-4 tracking-widest border border-orange-200">
@@ -276,6 +346,61 @@ export default function App() {
         </div>
       </section>
 
+      {/* Author/Biography Section */}
+      <section className="py-24 px-4 bg-sky-50 relative overflow-hidden">
+        <div className="max-w-6xl mx-auto">
+          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+            {/* Image Container */}
+            <div className="w-full lg:w-1/2 relative group">
+              <div className="aspect-video rounded-[32px] md:rounded-[48px] overflow-hidden shadow-2xl border-[8px] md:border-[12px] border-white ring-1 ring-sky-200">
+                <img 
+                  src="https://i.ibb.co/dsPTphMM/Whats-App-Image-2026-05-01-at-11-58-16.jpg" 
+                  alt="Max Millian Martins" 
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  referrerPolicy="no-referrer"
+                />
+              </div>
+              {/* Floating Badge */}
+              <div className="absolute -bottom-6 -right-6 bg-yellow-400 text-yellow-900 px-6 py-4 rounded-3xl font-black shadow-xl border-2 border-yellow-600 rotate-3 hidden md:block">
+                Escritor & Teólogo
+              </div>
+            </div>
+
+            {/* Text Content */}
+            <div className="w-full lg:w-1/2 space-y-6 text-center lg:text-left">
+              <span className="bg-sky-900 text-white text-[10px] md:text-xs font-black uppercase px-4 py-1 rounded-full inline-block mb-2 tracking-widest">
+                Quem Idealizou o Projeto
+              </span>
+              <h2 className="text-4xl md:text-5xl font-black text-sky-900 italic tracking-tighter leading-none mb-4">
+                Max Millian Martins
+              </h2>
+              <div className="space-y-4 text-sky-800 font-medium text-lg leading-relaxed opacity-90">
+                <p>
+                  Autoridade eclesiástica, teólogo e escritor, Max Millian dedica sua vida a fortalecer as bases da família cristã através do ensino bíblico sólido e acessível.
+                </p>
+                <p>
+                  Pai da Lara e um apaixonado defensor do protagonismo dos pais na educação espiritual, ele acredita que o lar é o primeiro e mais importante seminário de uma criança.
+                </p>
+                <p className="font-black text-sky-900 italic">
+                  "Minha missão é equipar você para que seus filhos não apenas conheçam as histórias da Bíblia, mas amem o Deus dessas histórias."
+                </p>
+              </div>
+              
+              <div className="flex flex-wrap justify-center lg:justify-start gap-4 pt-6">
+                <div className="bg-white px-4 py-2 rounded-2xl border border-sky-200 flex items-center gap-2 shadow-sm">
+                  <Users size={18} className="text-sky-400" />
+                  <span className="text-xs font-bold text-sky-900 uppercase">Pai de Família</span>
+                </div>
+                <div className="bg-white px-4 py-2 rounded-2xl border border-sky-200 flex items-center gap-2 shadow-sm">
+                  <BookOpen size={18} className="text-sky-400" />
+                  <span className="text-xs font-bold text-sky-900 uppercase">Teólogo & Escritor</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Offer/Pricing Section */}
       <section id="oferta" className="py-16 md:py-24 bg-sky-900 px-4 overflow-hidden relative">
         <div className="max-w-4xl mx-auto relative z-10 text-center mb-10 md:mb-16">
@@ -312,7 +437,7 @@ export default function App() {
                 <span className="text-sky-900/30 line-through text-lg md:text-xl font-black italic">U$ 59,90</span>
                 <span className="text-5xl md:text-7xl font-black text-sky-900 leading-none tracking-tighter">U$ 10.99</span>
               </div>
-              <span className="text-base md:text-lg font-black text-sky-900 mb-6 md:mb-8 uppercase tracking-widest">vigo</span>
+              <div className="mb-6 md:mb-8"></div>
               <button 
                 onClick={() => alert("Checkout placeholder...")}
                 className="w-full bg-orange-500 hover:bg-orange-600 text-white font-black py-5 rounded-2xl shadow-xl shadow-orange-100 border-b-4 border-orange-700 text-xl uppercase tracking-tighter transition-all active:translate-y-1"
@@ -331,7 +456,7 @@ export default function App() {
       </section>
 
       {/* Guarantee Section */}
-      <section className="py-24 bg-white px-4 relative overflow-hidden">
+      <section id="garantia" className="py-24 bg-white px-4 relative overflow-hidden">
         <div className="max-w-5xl mx-auto">
           <div className="bg-sky-50 rounded-[48px] p-8 md:p-16 border-2 border-sky-100 flex flex-col md:flex-row items-center gap-12 shadow-2xl relative">
             <div className="absolute -top-10 -left-10 w-40 h-40 bg-yellow-400 rounded-full opacity-10 blur-3xl" />
